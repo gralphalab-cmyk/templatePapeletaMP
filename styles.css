@@ -1,0 +1,117 @@
+/* Generales */
+body {
+  font-family: Arial, sans-serif;
+  background: #fff;
+  margin: 15px;
+}
+
+/* Tablas */
+table {
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+th, td {
+  border: 1px solid #999;
+  padding: 10px 10px;
+  text-align: center;
+}
+th {
+  background-color: #e6e6e6;
+  font-weight: bold;
+  font-size: 18px;
+}
+td {
+  font-size: 25px;
+  font-weight: bold;
+}
+.logo-cell {
+  border: none;
+  text-align: right;
+  vertical-align: middle;
+  padding-right: 100px;
+}
+.logo {
+  height: 100px;
+}
+
+/* Contenedor principal */
+.contenedor {
+  display: flex;
+  gap: 0px;
+  align-items: stretch;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Columna izquierda */
+.columna {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  flex: 2;
+}
+
+/* Columna derecha QR */
+.qr-tabla {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+.columna table,
+.qr-tabla table {
+  width: 100%;
+}
+.qr-tabla td {
+  vertical-align: middle;
+  font-size: 22px;
+}
+
+/* Cantidad grande */
+.cantidad-grande {
+  font-size: 62.5px;
+}
+
+/* Ajustes QR */
+.qr-tabla th {
+  padding: 5px 10px;
+}
+
+/* Tablas principales */
+.tabla-principal {
+  width: 100%;
+  max-width: 700px;
+  margin-bottom: 5px;
+}
+
+/* Bloque de información */
+.bloque {
+  margin-bottom: 5mm; /* medio centímetro */
+}
+
+/* Línea punteada */
+.linea-punteada {
+  border: none;
+  border-top: 2px dashed #000;
+  margin: 5mm 0; /* medio cm arriba y abajo */
+}
+
+/* --- Configuración impresión A4 horizontal --- */
+@page {
+  size: A4 landscape;
+  margin: 15mm;
+}
+
+@media print {
+  body {
+    margin: 0;
+    background: #fff;
+  }
+  table {
+    page-break-inside: avoid;
+  }
+  .contenedor {
+    max-width: 100%;
+  }
+}
